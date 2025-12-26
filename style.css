@@ -1,0 +1,187 @@
+/* Color Variables */
+:root {
+    --primary-color: #d32f2f; /* Deep Red for appetite */
+    --secondary-color: #ffc107; /* Amber for energy */
+    --text-dark: #333;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    padding-top: 56px; /* Space for fixed navbar */
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Utility */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 85vh;
+    background: url('https://images.unsplash.com/photo-1514362545857-3bc16549766b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    position: relative;
+    margin-top: -56px; /* Counteract body padding */
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+.animate-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Items */
+.menu-item {
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color) !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link {
+    color: var(--text-dark);
+    margin: 0 5px;
+}
+
+/* Events & Carousel */
+.event-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.bg-dark-transparent {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 20px;
+}
+
+/* Gallery */
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.gallery-img:hover {
+    opacity: 0.8;
+}
+
+/* Modal Form Styles */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+/* Sticky WhatsApp Button */
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .hero-section {
+        height: 70vh;
+    }
+    .event-img {
+        height: 250px;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    height: 85vh;
+    /* Updated Image: A rich table spread of Indian food */
+    background: url('https://media.istockphoto.com/id/603267744/photo/tapas-food.jpg?s=1024x1024&w=is&k=20&c=s8HO0BpmBQtkyy9poIIOrtdIwaFthKVWXfr7g66L-zg=') no-repeat center center/cover;
+    position: relative;
+    margin-top: -56px; 
+}
